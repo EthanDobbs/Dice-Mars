@@ -1,0 +1,41 @@
+{
+  "name": "dice-mars",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --workspaces run build",
+    "build:client": "cd packages/client && npm run build",
+    "dev": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "dev:client": "cd packages/client && npm run dev",
+    "dev:server": "cd packages/server && npm run dev",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "cd packages/client && npm run dev",
+    "start:server": "cd packages/server && npm run start"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Terraforming Mars the Dice Game online",
+  "dependencies": {
+    "@tanstack/vue-query": "^5.52.0",
+    "@trpc/server": "^10.45.1",
+    "axios": "^1.7.5",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.2.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}
