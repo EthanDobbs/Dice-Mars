@@ -2,13 +2,18 @@
 
 #app {
   font-weight: normal;
+  font-family: Prototype;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background {
   background-size: cover;
   background-image: url("src/assets/images/landscape.jpg");
-  height: 100vh;
+  height: 100%;
   width: 100%;
   justify-content: center;
   display: flex;
-  font-family: Prototype;
 }
 
 #main-container {

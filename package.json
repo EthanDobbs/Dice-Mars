@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm --workspaces run build",
     "build:client": "cd packages/client && npm run build",
+    "build:server": "cd packages/server && npm run build",
     "dev": "concurrently \"npm run start:client\" \"npm run start:server\"",
     "dev:client": "cd packages/client && npm run dev",
     "dev:server": "cd packages/server && npm run dev",
